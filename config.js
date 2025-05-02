@@ -1,6 +1,6 @@
 module.exports = {
     // TOKEN BOT KAMU
-    "token": "token",
+    "token": "",
     // BISA ""online", "dnd", "idle"
     "status": "streaming", 
     // STATUS BOT NYA BEBAS ISI AMPE BERAPA 
