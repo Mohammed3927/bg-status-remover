@@ -14,8 +14,7 @@ client.once("ready", () => {
       {
         name: "ASWAYZ Community", // الاسم
         type: ActivityType.Streaming, // streaming | playing | listening
-        url: "https:/www.kick.com/mtnews_", // stream link
-      },
+        url: "https:/www.kick.com/mtnews_", // stream 
     ],
   });
 });
