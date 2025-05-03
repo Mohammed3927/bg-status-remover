@@ -3,7 +3,7 @@ const {
 } = require("discord.js");
 const config = require("./config.js");
 
-client.once("ready", () => {
+Client.once("ready", () => {
   console.log(`bot is ready! ${client.user.tag}!`);
   console.log(`Code by 505_qhtt`);
   console.log(`@discord.gg/`);
