@@ -1,7 +1,7 @@
 const {
   Client, ActivityType
 } = require("discord.js");
-const config = require("./comfig.js");
+const config = require("./config.js");
 
 client.once("ready", () => {
   console.log(`bot is ready! ${client.user.tag}!`);
@@ -16,6 +16,7 @@ client.once("ready", () => {
         name: "ASWAYZ Community", // الاسم
         type: ActivityType.Streaming, // streaming | playing | listening
         url: "https:/www.kick.com/mtnews_", // stream 
+      },
     ],
   });
 });
