@@ -1,33 +1,22 @@
-const config = require('./config.js');
-const { Client, GatewayIntentBits, ActivityType } = require('discord.js');
-const client = new Client({
-  intents: Object.keys(GatewayIntentBits).map((i) => {
-    return GatewayIntentBits[i];
-  }),
-});
+js
+const {
+  ActivityType,
+} = require("discord.js");
 
-let statusIndex = 0;
+client.once("ready", () => {
+  console.log(`bot is ready! ${client.user.tag}!`);
+  console.log(`Code by 505_qhtt`);
+  console.log(`@discord.gg/aswayz`);
 
-function update() {
-  const currentActivityName = config.statusMessage[statusIndex % config.statusMessage.length];
+  const statusType = "dnd"; // online = الاخضر | dnd = الاحمر | idle = الاصفر | invisible = غير متصل
   client.user.setPresence({
-    activities: [{ name: currentActivityName, type: ActivityType.Custom }],
-    status: config.status,
+    status: statusType,
+    activities: [
+      {
+        name: "ASWAYZ Community", // الاسم
+        type: ActivityType.Streaming, // streaming | playing | listening
+        url: "https:/www.kick.com/mtnews_", // stream link
+      },
+    ],
   });
-  statusIndex++;
-}
-
-client.once('ready', () => {
-  console.log(`✅ ${client.user.tag} sudah siap!`);
-  update();
-
-  if (typeof config.statusInterval === 'number' && config.statusInterval > 0) {
-    setInterval(update, config.statusInterval);
-  } else {
-    console.error('Invalid statusInterval in config');
-  }
-});
-
-client.login(config.token).catch((error) => {
-  console.error('Error logging in to Discord API:', error);
 });
