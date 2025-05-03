@@ -5,7 +5,7 @@ const {
 client.once("ready", () => {
   console.log(`bot is ready! ${client.user.tag}!`);
   console.log(`Code by 505_qhtt`);
-  console.log(`@discord.gg/aswayz`);
+  console.log(`@discord.gg/`);
 
   const statusType = "dnd"; // online = الاخضر | dnd = الاحمر | idle = الاصفر | invisible = غير متصل
   client.user.setPresence({
