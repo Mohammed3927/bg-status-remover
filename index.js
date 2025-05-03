@@ -1,4 +1,3 @@
-js
 const {
   ActivityType,
 } = require("discord.js");
