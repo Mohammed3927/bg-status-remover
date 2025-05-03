@@ -1,6 +1,7 @@
 const {
-  ActivityType,
+  Client, ActivityType
 } = require("discord.js");
+const config = require("./comfig.js");
 
 client.once("ready", () => {
   console.log(`bot is ready! ${client.user.tag}!`);
@@ -18,3 +19,5 @@ client.once("ready", () => {
     ],
   });
 });
+
+client.login(config.token),
